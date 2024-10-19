@@ -1,0 +1,263 @@
+<html>
+<head>
+	<title>MY_PAGE</title>
+	<style type="text/css">
+		header{
+			text-align: center;
+			font-size: 30px;
+			font-family:Arial, Helvetica, sans-serif;
+			margin: 30px;
+		}
+		hr{
+			border: 2px solid rgb(0, 0, 0);
+		}
+		ul li{
+			justify-content: space-around;
+		}
+		/*type 1 menu*/
+		#menu1 ul li{
+			background: yellow;
+			position: relative;
+			list-style: none;
+			display: inline-block;
+		}
+		/*type 2 menu*/
+		.menu2{
+			height: 60px;
+			width: auto;
+			background: rgb(31, 158, 183);
+			box-shadow: 0 10px 15 px rgba(0,0,0,0.1);
+
+		}
+		.menu2 ul{
+			padding: 0;
+			margin: 0;
+			float: right;
+			margin-right: 50px;
+
+		}
+		.menu2 ul li{
+			background: rgb(31, 158, 183);
+			position: relative;
+			list-style: none;
+			display: inline-block;
+	
+		}
+		.menu2 ul li a{
+			display: block;
+			padding: 0px 15px;
+			color: white;
+			text-decoration: none;
+			line-height: 60px;
+			font-size: 20px;
+		}
+		.menu2 ul li a:hover{
+			background: mediumvioletred;
+		}
+		.menu2 ul ul{
+			position: absolute;
+			top: 60px;
+			display: none;
+		}
+
+		.menu2 ul li:hover > ul{
+			display: block;
+		}
+		.menu2 ul ul li{
+			width: 150px;
+			float: none;
+			display: list-item;
+			position: relative;
+		}
+
+		.menu2 ul ul ul li{
+			position: relative;
+			top: -60px;
+			left: 150px;
+		}
+		
+		#detail{
+			padding-right: 100px;
+		}
+
+		.row1{
+			
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 10px;
+			margin-bottom: 100px;
+			padding-top: 80px;
+
+		}
+
+		#picture1 img{
+			margin-top: 50px;
+			width: 200px;
+			border-radius: 80%;
+			/*box-shadow: 1px 1px;*/
+		}
+
+		#title1{
+			text-decoration: underline;
+			text-align: left;
+			color: blue;
+			font-weight: bold;
+		}
+
+		.main_article{
+			background-color: white;
+			margin-top: 20px;
+			border: solid black 2px;
+			padding: 10px;
+			text-align: justify;
+		
+		}
+
+		body{
+			background-color: #6da6e4;
+		}
+
+		.footer_row3{
+			display: flex;
+			flex-direction: row;
+
+			justify-content: space-around;
+		}
+		
+		#whatsapp-contact img{
+			width: 30px;}
+
+		#whatsapp_icon{
+		width: 30px;
+		}
+		#whatsapp_icon:hover{
+			width: 80px;
+
+		}
+
+		#instagram_icon{
+		width: 30px;
+		}
+		#instagram_icon:hover{
+			width: 80px;
+
+		}
+		#whatsapp-contact{
+			flex-direction: row;
+			display: flex;
+			justify-content: space-evenly;
+			
+		}
+
+		#contact_number{
+			padding: 10px;
+		}
+
+		#instagram_icon{
+		}
+
+		.footer_row4{
+			display: flex;
+			text-align: center;
+			justify-content: space-around;
+		}
+
+		
+	</style>
+</head>
+<body>
+	<header> 
+		AL AMIN
+	</header>
+
+
+<!---TYEP 2 MENU DROPDOWN-->
+<div class="menu2">
+	<div id="contact">
+		<nav>
+			<ul>
+				<li>
+					<a href="#">Contact Us</a>
+				</li>
+			</ul>
+		</nav>
+	</div>	
+	<div id="detail">
+		<nav >
+			<ul>
+				<li> <a href="index.html">Homepage</a></li>
+				<li> <a href="page2.html">Educational Journey</a>
+					<ul>
+						<li><a href="#">Keyboard</a></li>
+						<li><a href="#">Mouse</a></li>
+						<li><a href="#">HardDisk</a></li>
+					</ul>
+				</li>
+				<li> <a href="#">Other Experiences</a>
+					<ul>
+						<li><a href="#">PenDrive</a></li>
+						<li><a href="#">External</a></li>
+						<li><a href="#">Others</a>
+							<ul>
+								<li><a href="#">USB</a></li>
+								<li><a href="#">Headphone</a></li>
+								<li><a href="#">Earphone</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>	
+
+	<div class="main_attention">
+		<div class="row1">
+			<div id="picture1">
+				<img src="amincircle4.png">
+			</div>
+
+			<article class="main_article">
+				<span id="title1">Meet Amin</span>
+				<p id="parapgraph">A passinoate 19 years old who likes computer and technology,
+					<br>always eager to learn something new, love challenges.<br><br>
+				Having to go through many hardship during my younger year,<br>
+				I have learn that in this life, there is nothing more precious than 
+				<br>knowledge.<br><br>
+			
+			Thus, this page serve as a collection of every knowledge and experience<br>
+		that I have gained throughout my life.</p>
+			</article>
+
+		</div>
+	</div>
+
+</body>
+
+<hr>
+<footer>
+	<div class="footer_row3">
+		<div id="whatsapp-contact">
+			<div id="whatsapp_icon">
+				<a target="_blank" href="https://wa.me/+60126479378"><img src="whatsapp-icon.png"></a>
+			</div>
+			<div id="instagram_icon">
+				<a target="_blank" href="https://www.instagram.com/aminnnn_.05/"><img src="instagram-icon.png"></a>
+			</div>
+			<div id="linkedin_icon">
+				<a target="_blank" href="https://www.linkedin.com/in/muhammad-al-amin-979674179/"><img src="linkedin-icon.png"></a>
+			</div>
+			<div id="tiktok_icon">
+				<a target="_blank" href="https://www.tiktok.com/@aminn_.05"><img src="tiktok-icon.png"></a>
+			</div>
+	 	</div>
+	</div>
+	<div class="footer_row4">
+		<p>test</p>
+	</div>
+	</div>
+</footer>
+</html>

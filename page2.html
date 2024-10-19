@@ -1,0 +1,631 @@
+<html>
+<head>
+	<title>MY_PAGE</title>
+	<style type="text/css">
+		@font-face {
+			font-family: OpenSans-Regular;
+			src: url(OpenSans-Regular.ttf);
+			
+			font-family:Montserrat-Regular ;
+			src: url(Montserrat-Regular.ttf);
+
+			font-family: Montserrat-Italic;
+			src: url(Montserrat-Italic.ttf);
+
+			font-family:PlayfairDisplay-Regular ;
+			src: url(PlayfairDisplay-Regular.ttf);
+		}
+
+		header{
+			text-align: center;
+			font-size: 20px;
+			font-family:Arial, Helvetica, sans-serif;
+			margin: 30px;
+			background-color: white;
+		}
+		hr{
+
+			border: 2px solid rgb(0, 0, 0);
+		}
+		.nav_row{
+			display: flex;
+			justify-content: space-around;
+			text-decoration: none;
+		}
+
+		nav ul li a {
+			text-decoration: none;
+			color: black;
+			font-size: 15px;
+			text-align: center;
+			justify-content: space-around;
+			padding-top: 25px;
+			margin: 10px;
+
+		}
+		
+
+		ul li{
+			text-decoration: none;
+			justify-content: space-around;
+			list-style-type: none;
+			
+		}
+
+		#nav_name{
+			font-family: Arial, Helvetica, sans-serif
+			font-size: 10px;
+		}
+
+		.row1{
+			
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 10px;
+			margin-bottom: 100px;
+			padding-top: 80px;
+
+		}
+
+        .row2{
+			
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 10px;
+			margin-bottom: 100px;
+			/*padding-top: 80px;*/
+
+		}
+
+		body{
+			background-color: #b6b1b1;
+		}
+
+		#subbox1{
+			background-color: black;
+			color: white;
+			text-align: center;
+			justify-content: space-around;
+			width: 600px;
+			margin-left: 150px;
+			padding-right: 300px;
+			padding-left: 300px;
+			padding-bottom: 20px;
+			border-radius: 20px;
+		}
+
+		/*hover or make box big for easier readibility / pop up*/
+		#subbox1{
+  		transition: transform .2s;
+  		margin: 0 auto;
+		}
+
+		#subbox1:hover{
+  		transform: scale(1.2); 
+
+		/*this is for making the image pop up*/
+		}
+		#subbox1 img{
+  		transition: transform .2s;
+  		margin: 0 auto;	
+		}
+
+		#subbox1 img:hover{
+  		transform: scale(1.5); 
+		}
+
+		#subbox1 p{
+			font-family: OpenSans-Regular;
+			text-align: justify;
+			text-justify: inter-word;
+			text-indent: 50px;
+			line-height: 1.5;
+			font-size: 15px;
+		}
+
+		#subbox1 hr{
+			
+			color: white;
+			margin: auto;
+			height: 2px;
+			width: 100%;
+			border-width: 0p;
+			background-color: white;
+		}
+
+		#box1 h3{
+			font-family: Montserrat-Regular;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+
+		#box1 a{
+			color: white;
+		}
+
+		#subbox1 h1{
+			font-family: Montserrat-Regular;
+			font-style: bold;
+			font-size: 30px;
+			text-align: center;
+			text-decoration: underline;
+			margin-bottom: 10px;
+		}
+
+		#subbox1_row1{
+			display: flex;
+			flex-direction: row;
+			align-items: left;
+			margin-top: 40px;
+		}
+
+		#python_logo img{
+			width: 150px;
+			margin-right: 10px;
+			margin-top: 100px;
+		}
+
+		#python_explanation{
+			margin-left: 30px;
+		}
+
+		#python_explanation p{
+			font-family: Montserrat-Italic;
+			font-size: 13px;
+		}
+
+		#subbox1_row2{
+			display: flex;
+			flex-direction: row;
+			align-items: left;
+			margin-top: 40px;
+		}
+
+		#html_logo img{
+			width: 150px;
+			margin-left: 30px;
+			margin-top: 100px;
+		}
+
+		#html_explanation{
+			margin-left: 30px;
+		}
+
+		#html_explanation p{
+			font-family: Montserrat-Italic;
+			font-size: 13px;
+		}
+
+		#subbox1_row3{
+			display: flex;
+			flex-direction: row;
+			align-items: left;
+			margin-top: 40px;
+		}
+
+		#css_logo img{
+			width: 150px;
+			margin-left: 30px;
+			margin-top: 100px;
+		}
+
+		#css_explanation{
+			margin-left: 30px;
+		}
+
+		#css_explanation p{
+			font-family: Montserrat-Italic;
+			font-size: 13px;
+		}
+
+		#subbox1_row4{
+			display: flex;
+			flex-direction: row;
+			align-items: left;
+			margin-top: 40px;
+		}
+
+		#javascript_logo img{
+			width: 150px;
+			margin-left: 30px;
+			margin-top: 100px;
+		}
+
+		#javascript_explanation{
+			margin-left: 30px;
+		}
+
+		#javascript_explanation p{
+			font-family: Montserrat-Italic;
+			font-size: 13px;
+		}
+
+		#subbox1_resultsem2{
+			text-align: center;
+		}
+
+		#subbox1_resultsem2 img{
+			text-align: center;
+			width: 550px;
+		}
+
+		#subbox1_resultsem1{
+			text-align: center;
+		}
+
+		#subbox1_resultsem1 img{
+			text-align: center;
+			width: 550px;
+		}
+
+		#maka_row{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			gap: 20px;
+		}
+
+		#maka_certificate_sem1 img{
+			width: 300px;
+		}
+
+		#maka_certificate_sem2 img{
+			width: 300px;
+		}
+
+		#subbox1_position ul li{
+			list-style: circle;
+			color: white;
+			line-height: 150%;
+		}
+
+		#subbox1_position_picture{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+
+			gap: 10px;
+			/*padding-top: 80px;*/
+		}
+
+		#subbox1_position_picture img{
+			width: 300px;
+		}
+
+		#picture3 img{
+			width: 300px;
+			height: 165px;
+	
+		}
+
+		#subbox1_position_picture h4{
+			font-family: Montserrat-Italic;
+			font-size: 13px;
+		}
+
+		#subbox2{
+			background-color: black;
+			color: white;
+			text-align: center;
+			justify-content: space-around;
+			width: 600px;
+			margin-left: 150px;
+			padding-right: 300px;
+			padding-left: 300px;
+			margin-top: 20px;
+			padding-bottom: 20px;
+			border-radius: 20px;
+		}
+
+		#subbox2_main_title h1{
+			font-family: Montserrat-Regular;
+			font-style: bold;
+			font-size: 30px;
+			text-align: center;
+			text-decoration: underline;
+			margin-bottom: 10px;
+		}
+
+		#subbox2_main_image img{
+			width: 500px;
+			height: 250px;
+		}
+
+		#subbox2 p{
+			font-family: OpenSans-Regular;
+			text-align: justify;
+			text-justify: inter-word;
+			text-indent: 50px;
+			line-height: 1.5;
+			font-size: 15px;
+		}
+
+		#box2 h3{
+			font-family: Montserrat-Regular;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+
+		#subbox2 hr{
+			
+			color: white;
+			margin: auto;
+			height: 2px;
+			width: 100%;
+			border-width: 0p;
+			background-color: white;
+
+		}
+
+		#subbox2 h3{
+			font-family: Montserrat-Regular;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+
+		#sijilspm_image img{
+			width: 400px;
+		}
+
+		#sijilspm_image h1{
+		 font-family: PlayfairDisplay-Regular;
+		 font-style: italic;
+		}
+
+		#position_in_secondaryschool ul li{
+			list-style: circle;
+			color: white;
+			line-height: 150%;
+		}
+
+		
+
+		.footer_row3{
+			display: flex;
+			flex-direction: row;
+			align-items: left;
+		}
+		
+		#whatsapp-contact img{
+			width: 30px;}
+
+		#whatsapp_icon{
+		width: 30px;
+		}
+		#whatsapp_icon:hover{
+			width: 80px;
+
+		}
+
+		#instagram_icon{
+		width: 30px;
+		}
+		#instagram_icon:hover{
+			width: 80px;
+
+		}
+		#whatsapp-contact{
+			flex-direction: row;
+			display: flex;
+			justify-content: space-evenly;
+			
+		}
+
+		#contact_number{
+			padding: 10px;
+		}
+
+		#instagram_icon{
+		}
+
+        #subbox2 h3{
+            text-decoration: underline;
+            text-align: center;
+            font-size: 15px;
+        }
+
+
+
+		
+	</style>
+</head>
+
+<header>
+	<div class="nav_row">
+		<div id="nav_name">
+			<nav>
+				<ul>
+					<li>
+						AMIN
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div id="details">
+			<nav>
+				<ul>
+					<li>
+						<a href="index.html">HOMEPAGE</a>
+						<a href="page2.html">EDUCATIONAL JOURNEY</a>
+						<a href="page3.html">OTHER EXPERIENCE</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div>
+			<nav>
+				<ul>
+					<li>
+						<a href="page4.html">CONTACT US</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		
+	</div>
+</header>
+<body>
+	<div class="main">
+		<div id="box1">
+			<div id="subbox1">
+				<h1>DIPLOMA : 2023-NOW</h1><br>
+				<img  src="kpmb_image.png">
+			<h3><a target="_blank" href="https://beranang.kpm.edu.my/kpmb/index.php">MARA BERANANG PROFESSIONAL COLLEGE</a></h3>
+			<p>I enroll into Mara Beranang Professional College in 30 November 2023. I enrolled into the college as part of the Diploma in Computer Science + SAS Programme. The course starts by teaching us programming language Python here to understand the basic coding. Eventually, other languages such as HTML, CSS, Javascript, Java, C++ and more according to each subject respective needs. Subject such as Computer System (CSC1923), Introduction to Multimedia (ITE1113) give us glimpse outside the coding environment. We also learn mathematical subject such as Calculus and Algebra (MAT1103) and Discrete Mathematics (MAT1093). Overall, all the subject that are included in our course is essential for those who are interested to work or futher their studies in the computer science field.</p>
+			<hr>
+			<div id="subbox1_row1">
+				<div id="python_logo">
+					<img src="python-logo.svg">
+				</div>
+				<div id="python_explanation">
+					<h3>PYTHON</h3>
+					<p>Python is a high-level, interpreted programming language known for its readability and simplicity. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming. Python's versatile standard library, extensive third-party modules, and active community make it popular for web development, data analysis, artificial intelligence, automation, and scientific computing. Its clean syntax emphasizes code readability, which helps developers write and maintain code efficiently. Python is widely used in both beginner and professional projects, making it a go-to choice for various fields and industries.</p>
+					
+				</div>
+			</div>
+
+			<div id="subbox1_row2">
+				<div id="html_explanation">
+					<h3>HTML</h3>
+					<p>HTML (HyperText Markup Language) is the standard language used for creating and structuring web pages. It uses a system of tags to define elements such as headings, paragraphs, images, links, and other content on a webpage. HTML provides the basic framework for web development, allowing developers to build the structure and layout of web content. Although it does not handle styling or functionality on its own, it works in conjunction with CSS (Cascading Style Sheets) for design and JavaScript for interactivity, making it an essential foundation for front-end web development.</p>
+				</div>
+				<div id="html_logo">
+					<img src="html-logo.svg">
+				</div>		
+			</div>
+			<div id="subbox1_row3">
+				<div id="css_logo">
+					<img src="css-logo.svg">
+				</div>
+				<div id="css_explanation">
+					<h3>CSS</h3>
+					<p>CSS (Cascading Style Sheets) is a styling language used to control the appearance and layout of HTML elements on a webpage. It allows developers to apply styles such as colors, fonts, spacing, and positioning, making websites visually appealing and user-friendly. CSS separates content from design by defining style rules in external files or within the HTML document, which helps maintain consistency and ease of maintenance across web pages. It also supports responsive design through media queries, enabling websites to adapt to different screen sizes and devices, making it essential for modern web development.</p>	
+				</div>
+				
+			</div>
+			<div id="subbox1_row4">
+				<div id="javascript_explanation">
+					<h3>JAVASCRIPT</h3>
+					<p>JavaScript is a versatile, high-level programming language used to add interactivity, dynamic content, and functionality to web pages. It enables client-side scripting, allowing web developers to create features like animations, form validations, and real-time updates that enhance the user experience. JavaScript can manipulate the Document Object Model (DOM) to dynamically change the content and structure of web pages. It also supports asynchronous programming through features like promises and async/await, enabling smooth handling of tasks such as data fetching. Often used alongside HTML and CSS, JavaScript is a core technology for front-end development, but it is also widely employed on the server side with platforms like Node.js.</p>
+				</div>
+				<div id="javascript_logo">
+					<img src="javascript-logo.svg">
+				</div>		
+			</div>
+		<hr>
+		<div id="subbox1_resultsem2">
+			<h3>SEMESTER 2 RESULT</h3>
+			<img src="resultsem2.png">
+
+		</div><br>	
+		<div id="subbox1_resultsem1">
+			<h3>SEMESTER 1 RESULT</h3>
+			<img src="resultsem2.png">
+		</div><br>
+		<div id="maka_certificate">
+			<h3>MAKA CERTIFICATE</h3><br>
+			<div id="maka_row">
+				<div id="maka_certificate_sem1">
+					<img src="makacertificatesem1.jpg">
+				</div>
+				<div id="maka_certificate_sem2">
+					<img src="makacertificatesem2.jpg">
+				</div>
+			</div><br><br>
+			
+		</div>
+		<hr>
+		<div id="subbox1_position">
+			<h3>POSITION IN COLLEGE</h3>
+			<ul>
+				<li>
+					Seketriat Majlis Pemimpin Pelajar (SMPP) Akademik & Kerjaya
+				</li>
+				<li>
+					Orientation Commitee (OC) Tugasan Khas
+				</li>
+				<li>
+					Warta Sedaya Photographer & Video Editor
+				</li>
+			</ul>
+		</div>
+		<div id="subbox1_position_picture">
+			<div id="picture1">
+				<img src="ocimage.png">
+				<h4>Orientation Comitee (OC)</h4>
+			</div>
+			<div id="picture2">
+				<img src="smppimage.png">
+				<h4>Seketeriat Majlis Pemimpin Pelajar (SMPP)</h4>
+			</div>
+			<div id="picture3">
+				<img src="1.png">
+				<h4>Warta Sedaya</h4>
+			</div>
+			
+		</div>
+		
+		</div>
+
+		<div id="subbox2">
+			<div id="subbox2_main_title"><br>
+				<h1>
+					SECONDARY SCHOOL (2018-2023)
+				</h1>
+			</div><br>
+			<div id="subbox2_main_image">
+				<img src="smkseripagi1.jpg">
+			</div>
+			<div id="subbox2_main_content">
+				<h3>SEKOLAH MENENGAH KEBANGSAAN SERI PAGI</h3>
+				<p>I enroll into SMK Seri Pagi in 2018. SMK Seri Pagi is what I refer to as home nowdays. This school has become the sole reason why I enjoy studying so much. During my lower form, despite my love for computer, I am placed into RBT class. While in my upper form, I was placed into Business and Malay Literature class. I learn many things and have many friend here. During the Covid-19 pandemic, we had online classes that were proven to be quite challenging because how unprepared everyone was. Despite all the challenge, Alhamdulillah, all my efforts bear fruits at the end of my studies. I was one of the 7 straight A student in the school and was entitled The Best Student from my stream. I held tight all the knowledge and experinece that I have gathered here as I continue to embark into the unknown future.</p>
+			</div><hr><br>
+			<div id="sijilspm_image">
+				<h1>"Dream it. Believe it. Achieve it."</h1>
+				<h3>SPM CERTIFICATE</h3>
+				<img src="sijilspm.jpg">
+			</div><br>
+			<hr>
+			<div id="position_in_secondaryschool">
+				<h3>Position in Secondary School</h3>
+				<ul>
+					<li>
+						President of Malay and Literature Club
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+
+
+</body>
+
+<hr>
+<footer>
+	For Enquiry Purpose :
+	<div class="footer_row3">
+		<div id="whatsapp-contact">
+			<div id="whatsapp_icon">
+				<a target="_blank" href="https://wa.me/+60126479378"><img src="whatsapp-icon.png"></a>
+			</div>
+			<div id="instagram_icon">
+				<a target="_blank" href="https://www.instagram.com/aminnnn_.05/"><img src="instagram-icon.png"></a>
+			</div>
+			<div id="linkedin_icon">
+				<a target="_blank" href="https://www.linkedin.com/in/muhammad-al-amin-979674179/"><img src="linkedin-icon.png"></a>
+			</div>
+			<div id="tiktok_icon">
+				<a target="_blank" href="https://www.tiktok.com/@aminn_.05"><img src="tiktok-icon.png"></a>
+			</div>
+
+	 	</div>
+	</div>
+</footer>
+</html>
