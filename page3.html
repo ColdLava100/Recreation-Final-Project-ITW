@@ -206,6 +206,68 @@
 			text-align: left;
 		}
 
+		.footer_row3{
+			display: flex;
+			flex-direction: row;
+			margin: 10px;
+			justify-content: space-around;
+		}
+		
+		#whatsapp-contact img{
+			width: 30px;}
+
+		#whatsapp_icon{
+		width: 30px;
+		}
+		#whatsapp_icon:hover{
+			width: 80px;
+
+		}
+
+		#instagram_icon{
+		width: 30px;
+		}
+		#instagram_icon:hover{
+			width: 80px;
+
+		}
+		#whatsapp-contact{
+			flex-direction: row;
+			display: flex;
+			justify-content: space-evenly;
+			padding-top: 10px;
+			padding-bottom: 1px;
+			
+		}
+
+		#contact_number{
+			padding: 10px;
+		}
+
+		#instagram_icon{
+		}
+
+		.footer_row4{
+			display: flex;
+			text-align: center;
+			justify-content: space-around;
+            padding-top: 0px;
+		}
+		footer{
+			background-color: white;
+		}
+
+        .rowtimedate{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 10px;
+			/*padding-top: 80px;*/
+
+		}
+
 
         </style>
 </head>
@@ -265,7 +327,7 @@
                     <p>Company Name : Anggun Legacy Global Sdn Bhd</p>
                     <p>Location : 532-G, Jln Bandar Senawang 16, 
                         <br>Pusat Bandar Senawang, 70450 Senawang, <br>Negeri Sembilan</p>
-                    <p>Employment : Apri 2023 - May 2023</p><br>
+                    <p>Employment : April 2023 - May 2023</p><br>
                     
                     <h4>Job Description :-</h4>
                     <ul>
@@ -324,3 +386,79 @@
         </div>
     </div>
 </body>
+
+<footer>
+	<div class="footer_row3">
+		<div id="whatsapp-contact">
+			<div id="whatsapp_icon">
+				<a target="_blank" href="https://wa.me/+60126479378"><img src="whatsapp-icon.png"></a>
+			</div>
+			<div id="instagram_icon">
+				<a target="_blank" href="https://www.instagram.com/aminnnn_.05/"><img src="instagram-icon.png"></a>
+			</div>
+			<div id="linkedin_icon">
+				<a target="_blank" href="https://www.linkedin.com/in/muhammad-al-amin-979674179/"><img src="linkedin-icon.png"></a>
+			</div>
+			<div id="tiktok_icon">
+				<a target="_blank" href="https://www.tiktok.com/@aminn_.05"><img src="tiktok-icon.png"></a>
+			</div>
+            
+	 	</div>
+	</div>
+    <div class="rowtimedate">
+        <div class="currenttime">
+            <span id=tick2>
+            </span>
+            
+            <script>
+            
+            function show2(){
+            if (!document.all&&!document.getElementById)
+            return
+            thelement=document.getElementById? document.getElementById("tick2"): document.all.tick2
+            var Digital=new Date()
+            var hours=Digital.getHours()
+            var minutes=Digital.getMinutes()
+            var seconds=Digital.getSeconds()
+            var dn="PM"
+            if (hours<12)
+            dn="AM"
+            if (hours>12)
+            hours=hours-12
+            if (hours==0)
+            hours=12
+            if (minutes<=9)
+            minutes="0"+minutes
+            if (seconds<=9)
+            seconds="0"+seconds
+            var ctime=hours+":"+minutes+":"+seconds+" "+dn
+            thelement.innerHTML="<style='font-size:14;color:black;'>"+ctime+"</style=>"
+            setTimeout("show2()",1000)
+            }
+            window.onload=show2
+            
+            </script>|
+    </div>
+    <div class="currentdate">
+        <p id="currentDate"></p>
+
+    <script>
+        function getCurrentDate() {
+            const today = new Date();
+            const day = String(today.getDate()).padStart(2, '0');
+            const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+            const year = today.getFullYear();
+
+            return `${day}/${month}/${year}`;
+        }
+
+        document.getElementById('currentDate').textContent = getCurrentDate();
+    </script>
+    </div>
+</div>
+	<div class="footer_row4">
+		<p>&copy;AMIN ALL RIGHT RESERVE</p>
+	</div>
+
+</footer>
+</html>
