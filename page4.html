@@ -1,0 +1,280 @@
+<html>
+<head>
+	<title>MY_PAGE</title>
+	<style type="text/css">
+		@font-face {
+			font-family: OpenSans-Regular;
+			src: url(OpenSans-Regular.ttf);
+			
+			font-family:Montserrat-Regular ;
+			src: url(Montserrat-Regular.ttf);
+
+			font-family: Montserrat-Italic;
+			src: url(Montserrat-Italic.ttf);
+
+			font-family:PlayfairDisplay-Regular ;
+			src: url(PlayfairDisplay-Regular.ttf);
+		}
+
+		header{
+			text-align: center;
+			font-size: 20px;
+			font-family:Arial, Helvetica, sans-serif;
+			margin: 30px;
+			background-color: white;
+		}
+		hr{
+
+			border: 2px solid rgb(0, 0, 0);
+		}
+		.nav_row{
+			display: flex;
+			justify-content: space-around;
+			text-decoration: none;
+		}
+
+		nav ul li a {
+			text-decoration: none;
+			color: black;
+			font-size: 15px;
+			text-align: center;
+			justify-content: space-around;
+			padding-top: 25px;
+			padding-bottom: 25px;
+			padding-left: 5px;
+			padding-right: 5px;
+			margin: 10px;
+
+		}
+
+        nav ul li a:hover{
+			background: black;
+			color: white
+		}
+		
+
+		ul li{
+			text-decoration: none;
+			justify-content: space-around;
+			list-style-type: none;
+			
+		}
+
+		#nav_name{
+			font-family: Arial, Helvetica, sans-serif
+			font-size: 10px;
+		}
+
+		.row1{
+			
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 10px;
+			margin-bottom: 100px;
+			padding-top: 80px;
+
+		}
+
+        .row2{
+			
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 10px;
+			margin-bottom: 100px;
+			/*padding-top: 80px;*/
+
+		}
+
+
+		body{
+			background-color: #b6b1b1;
+		}
+
+        .footer_row3{
+			display: flex;
+			flex-direction: row;
+			margin: 10px;
+			justify-content: space-around;
+		}
+		
+		#whatsapp-contact img{
+			width: 30px;}
+
+		#whatsapp_icon{
+		width: 30px;
+		}
+		#whatsapp_icon:hover{
+			width: 80px;
+
+		}
+
+		#instagram_icon{
+		width: 30px;
+		}
+		#instagram_icon:hover{
+			width: 80px;
+
+		}
+		#whatsapp-contact{
+			flex-direction: row;
+			display: flex;
+			justify-content: space-evenly;
+			padding-top: 10px;
+			padding-bottom: 1px;
+			
+		}
+
+		#contact_number{
+			padding: 10px;
+		}
+
+		#instagram_icon{
+		}
+
+		.footer_row4{
+			display: flex;
+			text-align: center;
+			justify-content: space-around;
+            padding-top: 0px;
+		}
+		footer{
+			background-color: white;
+		}
+
+        .rowtimedate{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 10px;
+			/*padding-top: 80px;*/
+
+		}
+
+		
+	</style>
+</head>
+
+<header>
+	<div class="nav_row">
+		<div id="nav_name">
+			<nav>
+				<ul>
+					<li>
+						AMIN
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div id="details">
+			<nav>
+				<ul>
+					<li>
+						<a href="index.html">HOMEPAGE</a>
+						<a href="page2.html">EDUCATIONAL JOURNEY</a>
+						<a href="page3.html">OTHER EXPERIENCE</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div>
+			<nav>
+				<ul>
+					<li>
+						<a href="page4.html">CONTACT US</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		
+	</div>
+</header>
+
+<body>
+
+</body>
+
+<footer>
+	<div class="footer_row3">
+		<div id="whatsapp-contact">
+			<div id="whatsapp_icon">
+				<a target="_blank" href="https://wa.me/+60126479378"><img src="whatsapp-icon.png"></a>
+			</div>
+			<div id="instagram_icon">
+				<a target="_blank" href="https://www.instagram.com/aminnnn_.05/"><img src="instagram-icon.png"></a>
+			</div>
+			<div id="linkedin_icon">
+				<a target="_blank" href="https://www.linkedin.com/in/muhammad-al-amin-979674179/"><img src="linkedin-icon.png"></a>
+			</div>
+			<div id="tiktok_icon">
+				<a target="_blank" href="https://www.tiktok.com/@aminn_.05"><img src="tiktok-icon.png"></a>
+			</div>
+            
+	 	</div>
+	</div>
+    <div class="rowtimedate">
+        <div class="currenttime">
+            <span id=tick2>
+            </span>
+            
+            <script>
+            
+            function show2(){
+            if (!document.all&&!document.getElementById)
+            return
+            thelement=document.getElementById? document.getElementById("tick2"): document.all.tick2
+            var Digital=new Date()
+            var hours=Digital.getHours()
+            var minutes=Digital.getMinutes()
+            var seconds=Digital.getSeconds()
+            var dn="PM"
+            if (hours<12)
+            dn="AM"
+            if (hours>12)
+            hours=hours-12
+            if (hours==0)
+            hours=12
+            if (minutes<=9)
+            minutes="0"+minutes
+            if (seconds<=9)
+            seconds="0"+seconds
+            var ctime=hours+":"+minutes+":"+seconds+" "+dn
+            thelement.innerHTML="<b style='font-size:14;color:black;'>"+ctime+"</b>"
+            setTimeout("show2()",1000)
+            }
+            window.onload=show2
+            
+            </script>|
+    </div>
+    <div class="currentdate">
+        <p id="currentDate"></p>
+
+    <script>
+        // Function to get the current date in dd/mm/yyyy format
+        function getCurrentDate() {
+            const today = new Date();
+            const day = String(today.getDate()).padStart(2, '0');
+            const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+            const year = today.getFullYear();
+
+            return `${day}/${month}/${year}`;
+        }
+
+        // Display the date in the HTML element with id "currentDate"
+        document.getElementById('currentDate').textContent = getCurrentDate();
+    </script>
+    </div>
+</div>
+	<div class="footer_row4">
+		<p>&copy;AMIN ALL RIGHT RESERVE</p>
+	</div>
+
+</footer>
+</html>
