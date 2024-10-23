@@ -81,10 +81,49 @@
 		}
 
 		#picture1 img{
-			margin-top: 50px;
 			width: 200px;
 			border-radius: 80%;
 			/*box-shadow: 1px 1px;*/
+		}
+
+		#amin1{
+		display: block;
+		width: 100%;
+		height: auto;
+		}
+
+		#picture1{
+		position: relative;
+		margin-top: 20px;
+		max-width: 400px;
+		border-radius: 2000px;
+		}
+
+		#picture1overlay {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		transition: .3s ease;
+	}
+
+		#sijilspm10{
+		color: white;
+		font-size: 100px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		text-align: center;
+		}
+
+		#picture1:hover #picture1overlay {
+		opacity: 1;
 		}
 
 		#title1{
@@ -206,7 +245,10 @@
 	<div class="main_attention">
 		<div class="row1">
 			<div id="picture1">
-				<img src="amincircle4.png">
+				<img src="amincircle4.png" id="amin1">
+				<div id="picture1overlay">
+					<img id="sijilspm10" src="overlay1.png">
+				</div>
 			</div>
 
 			<article class="main_article">

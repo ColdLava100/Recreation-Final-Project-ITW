@@ -96,25 +96,6 @@
 			background-color: #b6b1b1;
 		}
 
-        .main_box{
-            display: flex;
-            flex-direction: column;
-			text-align: center;
-			justify-content: space-around;
-            padding-top: 0px;
-        }
-
-        #box1{
-            background-color: rgba(232, 198, 7, 0.916);
-        }
-
-        #box1 h3,#box2 h3,#box3 h3{
-			font-family: Montserrat-Regular;
-			text-decoration: underline;
-			font-weight: bold;   
-            color: rgb(0, 0, 0);
-            text-align: center;
-        }
 
         .footer_row3{
 			display: flex;
@@ -174,8 +155,87 @@
 			flex-wrap: wrap;
 			gap: 10px;
 			/*padding-top: 80px;*/
-
 		}
+
+		.main_form{
+		display: flex;
+		text-align: left;
+		padding-left: 300px;
+		}
+
+		.contact_form{
+			background-color: rgba(255, 255, 255, .15);  
+ 			backdrop-filter: blur(5px);
+			margin-left: 50px;
+			margin-right: 100px;
+			border-radius: 20px;
+			padding-right: 300px;
+			padding-left: 20px;
+			align-items: center;
+			box-shadow: 0px 0px 20px 3px;
+		}
+
+
+	.contact_form input[id="name"] {
+    width: 170%; /* Make the input fields take up the full width of the container */
+    padding: 10px;
+	padding-right: 100px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }		
+
+  .contact_form input[id="email"] {
+    width: 170%; 
+    padding: 10px;
+	padding-right: 100px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }	
+
+  .contact_form input[id="phoneno"] {
+    width: 170%; 
+    padding: 10px;
+	padding-right: 100px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+    .contact_form textarea[id="reason"] {
+    width: 170%; /* Make the input fields take up the full width of the container */
+    height: 200px;
+	padding: 10px;
+	padding-right: 100px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }	
+  button{
+	background-color: greenyellow;
+	width: 170%;
+	height: 28px;
+ 	backdrop-filter: blur(5px);
+	border-radius: 5px;
+
+  }
+
+ .main_form h3{
+			font-family: Montserrat-Regular;
+			text-decoration: underline;
+			font-weight: bold;   
+            color: rgb(0, 0, 0);
+            text-align: center
+        }
+
+	#form_title{
+		margin-left: 300px;
+	}
 
 		
 	</style>
@@ -217,11 +277,66 @@
 </header>
 
 <body>
-    <div class="main_box">
-        <div id="box1">
+	<div class="main_form">
+		<div class="contact_form">
+			<div id="form_title">
+				<h3>Contact Form</h3>
+			</div>
+			
+			<br>
+		  <form name="myForm" onsubmit="return validateForm(event)" method="post">
+			Name: <br>
+			<input type="text" id="name"><br>
+			Email:<br>
+			<input type="text" id="email"><br>
+			Phone Number:<br>
+			<input type="text" id="phoneno"><br>
+			Reason :<br>
+			<textarea type="text" id="reason"></textarea><br><br>
+		  
+			<button onclick="addItemPressed()">Submit</button>
+		  </form>
+		</div>		
+	</div><br>
+	
+	
+	
+	
+	<!--javascript for form validate-->
+	<script>
+	function validateForm() {
+		event.preventDefault(); // Prevent form submission
+	  let x = document.forms["myForm"]["name"].value;
+	  let y = document.forms["myForm"]["email"].value;
+	  let z = document.forms["myForm"]["phoneno"].value;
+	  let r = document.forms["myForm"]["reason"].value;
+	  
+	  if (x == "") {
+		alert("Name must be filled out");
+		return false;
+	  }
+	  else if (y == "") {
+		alert("Email must be filled out");
+		return false;
+	  }
+	  else if (z == "") {
+		alert("Phone Number must be filled out");
+		return false;
+	  }
+	
+	  else if (r == ""){
+		alert("Reason must be filled out");
+		return false;
+	  }
+	  else
+	  {
+		alert("Thank You!!");
+	  }
 
-        </div>
-    </div>
+	  document.forms["myForm"].reset();
+	}
+	
+	</script>
 </body>
 
 <footer>
