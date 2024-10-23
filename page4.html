@@ -276,7 +276,6 @@
 	</div>
 </header>
 
-<body>
 	<div class="main_form">
 		<div class="contact_form">
 			<div id="form_title">
@@ -284,7 +283,7 @@
 			</div>
 			
 			<br>
-		  <form name="myForm" onsubmit="return validateForm(event)" method="post">
+		  <form name="myForm" onsubmit="event.preventdefault; showAlert();">
 			Name: <br>
 			<input type="text" id="name"><br>
 			Email:<br>
@@ -294,48 +293,53 @@
 			Reason :<br>
 			<textarea type="text" id="reason"></textarea><br><br>
 		  
-			<button onclick="addItemPressed()">Submit</button>
+			<button type="submit" id="submitbutton" >Submit</button>
 		  </form>
-		</div>		
+		</div>	
+		
+		<div id="submittedData"></div>
 	</div><br>
 	
 	
 	
-	
-	<!--javascript for form validate-->
-	<script>
-	function validateForm() {
-		event.preventDefault(); // Prevent form submission
-	  let x = document.forms["myForm"]["name"].value;
-	  let y = document.forms["myForm"]["email"].value;
-	  let z = document.forms["myForm"]["phoneno"].value;
-	  let r = document.forms["myForm"]["reason"].value;
-	  
-	  if (x == "") {
-		alert("Name must be filled out");
-		return false;
-	  }
-	  else if (y == "") {
-		alert("Email must be filled out");
-		return false;
-	  }
-	  else if (z == "") {
-		alert("Phone Number must be filled out");
-		return false;
-	  }
-	
-	  else if (r == ""){
-		alert("Reason must be filled out");
-		return false;
-	  }
-	  else
-	  {
-		alert("Thank You!!");
-	  }
+	<script type="text/javascript">
+	function showAlert() {	 
+	const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phoneno").value;
+    const reason = document.getElementById("reason").value; 
+	var alert_box = "Form Submitted\n" +
+						"Name :" + name + "\n" +
+						"Email :" + email + "\n" +
+						"Phone :" + phone + "\n" +
+						"Reason :" + reason;
 
-	  document.forms["myForm"].reset();
+	  alert(alert_box)
+
 	}
-	
+
+	function toggleSubmitButton() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phoneno").value;
+    const reason = document.getElementById("reason").value;
+    const submitButton = document.getElementById("submitbutton");
+
+    if (name && email && phone && reason) {
+        submitButton.removeAttribute("disabled");
+    } else {
+        submitButton.setAttribute("disabled", true);
+    }
+}
+
+// Add event listeners to check form inputs
+document.getElementById("name").addEventListener("input", toggleSubmitButton);
+document.getElementById("email").addEventListener("input", toggleSubmitButton);
+document.getElementById("phoneno").addEventListener("input", toggleSubmitButton);
+document.getElementById("reason").addEventListener("input", toggleSubmitButton);
+
+
+
 	</script>
 </body>
 
