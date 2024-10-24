@@ -1,11 +1,32 @@
 <html>
 <head>
-	<title>MY_PAGE</title>
+	<title>HomePage</title>
 	<style type="text/css">
-	@font-face {
-		font-family: RobotoMono;
-		src: url(RobotoMono-VariableFont_wght.ttf);
-	}
+		@font-face {
+		font-family: 'RobotoMono';
+		src: url('RobotoMono-VariableFont_wght.ttf');
+		}
+
+		@font-face {
+		font-family: 'OpenSans-Regular';
+		src: url('OpenSans-Regular.ttf');
+		}
+
+		@font-face {
+		font-family: 'Montserrat-Regular';
+		src: url('Montserrat-Regular.ttf');
+		}
+
+		@font-face {
+		font-family: 'Montserrat-Italic';
+		src: url('Montserrat-Italic.ttf');
+		}
+
+		@font-face {
+		font-family: 'PlayfairDisplay-Regular';
+		src: url('PlayfairDisplay-Regular.ttf');
+		}
+
 		
 		header{
 			text-align: center;
@@ -194,6 +215,18 @@
 			background-color: white;
 		}
 
+		.rowtimedate{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 10px;
+			/*padding-top: 80px;*/
+
+		}
+
+
 		
 	</style>
 </head>
@@ -253,11 +286,6 @@
 			Thus, this page serve as a collection of every knowledge and experience<br>
 		that I have gained throughout my life.</p>
 			</article>
-
-		</div><hr>
-		<div id="skill_section">
-
-		</div>
 	</div>
 
 </body>
@@ -277,11 +305,63 @@
 			<div id="tiktok_icon">
 				<a target="_blank" href="https://www.tiktok.com/@aminn_.05"><img src="tiktok-icon.png"></a>
 			</div>
+            
 	 	</div>
 	</div>
+    <div class="rowtimedate">
+        <div class="currenttime">
+            <span id=tick2>
+            </span>
+            
+            <script>
+            
+            function show2(){
+            if (!document.all&&!document.getElementById)
+            return
+            thelement=document.getElementById? document.getElementById("tick2"): document.all.tick2
+            var Digital=new Date()
+            var hours=Digital.getHours()
+            var minutes=Digital.getMinutes()
+            var seconds=Digital.getSeconds()
+            var dn="PM"
+            if (hours<12)
+            dn="AM"
+            if (hours>12)
+            hours=hours-12
+            if (hours==0)
+            hours=12
+            if (minutes<=9)
+            minutes="0"+minutes
+            if (seconds<=9)
+            seconds="0"+seconds
+            var ctime=hours+":"+minutes+":"+seconds+" "+dn
+            thelement.innerHTML="<style='font-size:14;color:black;'>"+ctime+"</style=>"
+            setTimeout("show2()",1000)
+            }
+            window.onload=show2
+            
+            </script>|
+    </div>
+    <div class="currentdate">
+        <p id="currentDate"></p>
+
+    <script>
+        function getCurrentDate() {
+            const today = new Date();
+            const day = String(today.getDate()).padStart(2, '0');
+            const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+            const year = today.getFullYear();
+
+            return `${day}/${month}/${year}`;
+        }
+
+        document.getElementById('currentDate').textContent = getCurrentDate();
+    </script>
+    </div>
+</div>
 	<div class="footer_row4">
 		<p>&copy;AMIN ALL RIGHT RESERVE</p>
 	</div>
-	</div>
+
 </footer>
 </html>
